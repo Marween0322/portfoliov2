@@ -1,0 +1,827 @@
+:root{
+    --orange-color: #FF8D24;
+    --dack-blue-color: #2F505F;
+    --dark-green-color: #3894A3;
+    --white-color: #F1F1EF;
+    --light-green-color: #C7DAD4;
+}
+*,
+*::after,
+I*::before{
+    box-sizing: border-box;
+}
+/* content */
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    font-family: "poppins";
+    height: 100vh;
+    background-color: #0f1923;
+}
+
+.wrapper{
+    width: 100%;
+    margin: 100%;
+    
+}
+
+.logo {
+    text-decoration: none;
+    font-weight: 900;
+    color: inherit;
+    display: inline-block;
+    width: 119.09px;
+    height: 41px;
+    flex-shrink: 0;
+    }
+    nav {
+        background-color: transparent;
+        position: fixed;
+        z-index: 100;
+        transition: background-color 0.3s, backdrop-filter 0.3s; /* Added backdrop-filter transition */
+        height: 10%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 200px;
+        box-sizing: border-box;
+        text-align: left;
+        font-size: 20px;
+        color: #2CCCFF;
+        font-family: 'Poppins', sans-serif;
+        backdrop-filter: blur(10px); /* Initial blur effect */
+    }
+    
+    nav ul {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        list-style: none;
+    }
+    
+    nav ul li a {
+        color: #2CCCFF;
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        text-decoration: none;
+        position: relative;
+    }
+    
+    nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #00a5c0;
+        transition: width 0.3s ease;
+    }
+    
+    nav ul li a:hover::after {
+        width: 100%;
+    }
+    
+    /* Add a background color when scrolling */
+    nav.scrolled {
+        background-color: #39393979;
+        backdrop-filter: blur(10px); /* Blur effect when scrolled */
+    }
+    
+
+.header-section {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    margin-left: 5%;
+    height: 100vh;
+    max-width: 50%;
+    padding: 0 5%;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.group-child {
+    padding-left: 8%;
+    margin-right: 100px;
+    border-radius: 10px;
+    background: linear-gradient(177.62deg, #2cccff 6.84%, #1863f4 51.38%, #3734cd 97%);
+    width: 43px;
+    height: 593px;
+    }
+.welcome{
+    display: flex;
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+    color: #00a2ffc9;
+    text-align: left;
+    width: 100%;
+    
+}
+.content__container {
+    font-weight: 600px;
+    overflow: hidden;
+    height: 80px;
+    padding: 0 45px;
+    position: relative;
+  }
+
+  .content__container:before {
+    content: "[";
+    position: absolute;
+    top: 20%;
+    left: 0;
+    color: #16a085;
+    font-size: 70px;
+    line-height: 40px;
+    opacity: 0;
+    animation: opacity 2s infinite;
+  }
+
+  .content__container:after {
+    content: "]";
+    position: absolute;
+    top: 20%;
+    right: 0;
+    color: #16a085;
+    font-size: 70px;
+    line-height: 40px;
+    opacity: 0;
+    animation: opacity 2s infinite;
+  }
+
+  .content__container__list {
+    margin-top: 0;
+    padding-left: 0px;
+    text-align: left;
+    list-style: none;
+    animation: change 10s infinite;
+    
+  }
+
+  .content__container__list__item {
+    line-height: 85px;
+    margin-left: -20px;
+  }
+
+  @keyframes opacity {
+    0%, 100% {
+      opacity: 0;
+      width: -70%;
+      
+      margin-top: 7px;
+    }
+    50% {
+      opacity: 1;
+      width: -70%;
+    }
+    
+  }
+  @keyframes change {
+    0%, 12.5%, 100% {
+      transform: translateY(-10%);
+    }
+    16.66%, 29.16% {
+      transform: translateY(-60%);
+    }
+    33.32%, 45.82% {
+      transform: translateY(-10%);
+    }
+    49.98%, 62.48% {
+      transform: translateY(-60%);
+    }
+    66.64%, 79.14% {
+      transform: translateY(-10%);
+    }
+    83.3%, 95.8% {
+      transform: translateY(-60%);
+    }
+  }
+  
+  .header-section .left h1 {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: 7vw; /* Responsive font size based on viewport width */
+    text-align: left;
+    width: 165%; /* Adjusted to 100% for responsiveness */
+    margin-left: 3px;
+    color: #55e8ff;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.content__container__list .content__container__list__item{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    text-align: left;
+    width: 180%;
+    color: #55e8ff;
+    margin-bottom: 0;
+    margin-top: 1.5%;
+}
+.content__container__list .content__container__list__item span{
+    color: #ff9d00;
+    margin-left: 15px;
+}
+.designer{
+    position: absolute;
+    margin-left: 45%;
+    margin-top: 100%;
+}
+
+.header-section .left p{
+    display: flex;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: left;
+    display: inline-block;
+    width: 110%;
+}
+.header-section .left {
+    width: 170%;
+}
+.btndark {
+    background: #44E5FF;
+    padding: 10px 30px;
+    border-radius: 9px;
+    color: #152331;
+    display: inline-block;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    margin-right: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Add box-shadow to the transition */
+}
+
+.btndark:hover {
+    padding: 10px 30px;
+    border: 2px solid #00A5C0;
+    color: #3895a3;
+    background-color: #ffffff;
+    display: inline-block;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: -8px 8px 0 0 #00B7C2; /* Add box-shadow on hover */
+}
+
+.joblink {
+    margin-top: -3rem;
+    margin-left: 10rem;
+    display: flex; /* Ensures the images are aligned in a row */
+}
+
+
+.joblink a img {
+    margin-left: 15px; /* Adjust the value as needed for the desired gap between images */
+    
+}
+
+.Btnli {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 15px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 20%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: #0077B5;
+    text-decoration: none; /* Ensure no default text underline for anchor element */
+}
+
+.Btnli img {
+    position: relative;
+    left: -17px; /* Adjust this value as needed */
+}
+
+/* text */
+.text {
+    position: relative;
+    margin-right: -15px;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+}
+
+/* hover effect on button width */
+.Btnli:hover {
+    width: 140px;
+    border-radius: 10px;
+    transition-duration: .3s;
+    cursor: pointer;
+    box-shadow: -8px 8px 0 0 #00B7C2;
+}
+
+/* hover effect button's text */
+.Btnli:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+}
+
+
+.Btnin {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 15px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 20%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: #ffffff;
+  }
+
+  .Btnin img {
+    position: relative;
+    left: -16px; /* Adjust this value as needed */
+}
+  
+  /* text */
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  /* hover effect on button width */
+  .Btnin:hover {
+    width: 130px;
+    border-radius: 10px;
+    transition-duration: .3s;
+    cursor: pointer;
+    box-shadow: -8px 8px 0 0 #00B7C2;
+  }
+  
+  /* hover effect button's text */
+  .Btnin:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+    color: #003A9B;
+  }
+
+  .Btnka {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 15px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 20%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: #0086FF;
+  }
+
+  .Btnka img{
+    position: relative;
+    left: -16px;
+  }
+  
+  /* text */
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  /* hover effect on button width */
+  .Btnka:hover {
+    width: 130px;
+    border-radius: 10px;
+    transition-duration: .3s;
+    cursor: pointer;
+    box-shadow: -8px 8px 0 0 #00B7C2;
+  }
+  
+  /* hover effect button's text */
+  .Btnka:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+  }
+
+  /* Basic styling for the card */
+  .about-section {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+  .card {
+    position: relative;
+    border-radius: 40px;
+    background-color: rgba(46, 76, 107, 0.4);
+    backdrop-filter: blur(10px);
+    width: 80%;
+    height: 710px;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 18rem;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background: url('images/Intersect.png') center/contain no-repeat;
+    background-size:contain;
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 50px; /* Adjust this value to match the card's border-radius */
+}
+
+.card-content {
+    position: absolute;
+    top: 42%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #26aafb;
+    z-index: 1;
+    width: 40%;
+}
+
+.card-content h2 {
+    margin: 0;
+    font-size: 70px;
+}
+.card-content2 {
+position: absolute;
+top: 50%;
+left: 75%;
+transform: translate(-50%, -50%);
+text-align: center;
+z-index: 1;
+border-radius: 10px; /* Add border-radius to the card-content2 */
+display: flex; /* Add flex display to allow justify-content and align-items */
+justify-content: center;
+align-items: center;
+}
+.card-content2 img{
+    border-radius: 0px 0px 0px 138px;
+    box-shadow: 5px 5px 15px #26a9fb76;
+}
+.about-section p{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: left;
+    display: inline-block;
+    width: 90%;
+}
+
+.content {
+    position: relative;
+    letter-spacing: 0.01em;
+    line-height: 10%;
+    font-size: 50px;
+    }
+.content1 {
+        
+        position: relative;
+        letter-spacing: 0.01em;
+        line-height: 50%;
+        font-size: 40px
+        }
+.skills {
+    position: relative;
+    width: 90%;
+    padding-top: 10%;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 56px;
+    color: #26aafb;
+    font-family: Inter;
+    }
+
+
+    .languag-wrapper {
+        border-radius: 10px;
+        border: 1px solid #26aafb;
+        box-sizing: border-box;
+        width: 90%; /* Use percentage value for flexibility */
+        max-width: 300px; /* Add max-width to prevent it from growing too large */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        z-index: 0;
+    }
+
+    .frame-parent {
+        position: relative;
+        width: 90%; /* Use percentage value for flexibility */
+        max-width: 100%; /* Add max-width to prevent it from growing too large */
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 25px; /* Adjust the gap as needed */
+        text-align: left;
+        font-size: 24px;
+        color: #26aafb;
+        font-family: Poppins;
+    }
+
+    .python, .php, .javascript, .css, .html5, .react, .tailwindcss, .bootstrap, .django, .laravel, .vs-code, .figma, .pgadmin, .github, .git {
+        text-decoration: none;
+        color: #26aafb;
+        font-family: Poppins;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        gap: 10%;
+    }
+    .python, .php, .javascript, .css, .html5, .react, .tailwindcss, .bootstrap, .django, .laravel, .vs-code, .figma, .pgadmin, .github, .git img {
+        max-width: 100%; /* Make the image responsive */
+        height: auto;
+        margin-right: 10px; /* Add spacing between the image and text */
+        justify-content:space-around;
+    }
+  
+   
+
+
+    
+    .project-title {
+
+    position: relative;
+    margin-top: 20%;
+    padding-left: 10%;
+    display: flex;
+    text-align: left;
+    font-size: 56px;
+    color: #26aafb;
+    font-family: Inter
+    }
+
+    .project {
+        display: flex;
+        max-width: 78%; /* Increased max-width */
+        width: 100%; /* Adjusted width to 90% */
+        margin-top: 3%;
+        margin-left: 10%;
+        border-radius: 50px;
+        overflow: hidden;
+        background-color: #4A5468;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #myImageButton img {
+        margin-left: 85%;
+        margin-top: 18%;
+        width: 50px; /* Adjust the width as needed */
+        height: 50px; /* Adjust the height as needed */
+        
+    }
+    
+    .project img {
+    width: 50%;
+    height: auto;
+    margin: 2% 2% 2% 2%;
+    object-fit: cover;
+    border-radius: 30px 30px 30px 30px;
+            
+    }
+
+    .project h2{
+        position: relative;
+        font-size: 35px;
+        width: 80%; /* Use percentage value for flexibility */
+        max-width: 100%; /* Add max-width to prevent it from growing too large */
+        display: flex;
+        color: #ffffff;
+        font-family: Poppins;
+    }
+    .project p{
+        position: relative;
+        display: flex;
+        font-size: 18px;
+        width: 95%; /* Use percentage value for flexibility */
+        max-width: 100%; /* Add max-width to prevent it from growing too large */
+        margin-top: -5%;
+        color: #ffffff;
+        font-family: Poppins;
+    }
+    
+    .project-wrapper {
+        border-radius: 10px;
+        border: 1px solid #26aafb;
+        box-sizing: border-box;
+        width: 20%; /* Use percentage value for flexibility */
+        max-width: 300px; /* Add max-width to prevent it from growing too large */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        z-index: 0;
+    }
+
+    .ppython, .pphp, .pjavascript, .pcss, .phtml5, .preact, .ptailwindcss, .pbootstrap, .pdjango, .plaravel, .pvs-code, .pfigma, .ppgadmin, .pgithub, .pgit {
+        text-decoration: none;
+        color: #26aafb;
+        font-family: Poppins;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        gap: 5%;
+    }
+    .ppython, .pphp, .pjavascript, .pcss, .phtml5, .preact, .ptailwindcss, .pbootstrap, .pdjango, .plaravel, .pvs-code, .pfigma, .ppgadmin, .pgithub, .pgit img {
+        max-width: 50%; /* Make the image responsive */
+        height: auto;
+        align-items: center;
+        justify-content:space-around;
+    }
+
+    
+
+    .project-parent {
+        width: 80%; /* Use percentage value for flexibility */
+        max-width: 100%; /* Add max-width to prevent it from growing too large */
+        display: flex;
+        gap: 5px; /* Adjust the gap as needed */
+        font-size: 24px;
+        color: #26aafb;
+        font-family: Poppins;
+    }
+
+    .project1-title {
+        position: relative;
+        padding-top: 30%;
+        padding-left: 10%;
+        display: flex;
+        text-align: left;
+        font-size: 56px;
+        color: #26aafb;
+        font-family: Inter
+        }
+    
+        .project1 {
+            display: flex;
+            max-width: 78%; /* Increased max-width */
+            width: 100%; /* Adjusted width to 90% */
+            margin-top: 3%;
+            margin-left: 10%;
+            border-radius: 50px;
+            overflow: hidden;
+            background-color: #4A5468;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        
+        .project1 img {
+            width: 50%;
+            height: auto;
+            margin: 2% 2% 2% 2%;
+            object-fit: cover;
+            border-radius: 30px 30px 30px 30px;
+           
+        }
+    
+        .project1 h2{
+            position: relative;
+            font-size: 35px;
+            width: 80%; /* Use percentage value for flexibility */
+            max-width: 100%; /* Add max-width to prevent it from growing too large */
+            display: flex;
+            color: #ffffff;
+            font-family: Poppins;
+        }
+        .project1 p{
+            position: relative;
+            display: flex;
+            font-size: 18px;
+            width: 95%; /* Use percentage value for flexibility */
+            max-width: 100%; /* Add max-width to prevent it from growing too large */
+            margin-top: -5%;
+            color: #ffffff;
+            font-family: Poppins;
+        }
+        
+        .project1-wrapper {
+            border-radius: 10px;
+            border: 1px solid #26aafb;
+            box-sizing: border-box;
+            width: 20%; /* Use percentage value for flexibility */
+            max-width: 300px; /* Add max-width to prevent it from growing too large */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            z-index: 0;
+        }
+    
+    
+        .project1-parent {
+            width: 80%; /* Use percentage value for flexibility */
+            max-width: 100%; /* Add max-width to prevent it from growing too large */
+            display: flex;
+            gap: 20px; /* Adjust the gap as needed */
+            font-size: 24px;
+            color: #26aafb;
+            font-family: Poppins;
+        }
+
+        .design-container {
+            text-align: center;
+        }
+        
+        .design {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .small-image-container {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            width: 75%; /* Ensure it spans the full width */
+            margin-top: 15px; /* Add margin for spacing */
+            margin-left: 10%;
+            gap: 2%;
+        }
+
+        .small-image {
+            width: 33%;
+            height: 33%;
+            /* Add any additional styles for your images */
+        }
+
+        footer {
+            margin-top: 15%;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            
+        }
+
+        .footer-container {
+            justify-content:space-around;
+            display: flex;
+            align-items: center;
+        }
+        .footer-text {
+            background: linear-gradient(45deg, #3399ff, #ff66cc); /* Adjust the gradient colors as needed */
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline;
+        }
+        .footerbtn {
+            display: flex;
+            gap: 30px; /* Adjust the gap value as needed */
+        }
+
+        
