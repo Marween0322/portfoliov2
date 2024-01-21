@@ -27,15 +27,16 @@ body{
     
 }
 
-.logo {
+    nav img {
+    padding-top: 2%;
+    margin-left: -10%;
+    width: 8vw;
+    align-self: flex-start;
     text-decoration: none;
-    font-weight: 900;
     color: inherit;
     display: inline-block;
-    width: 119.09px;
-    height: 41px;
     flex-shrink: 0;
-    margin-top: -2%;
+         
     }
     nav {
         background-color: transparent;
@@ -105,10 +106,7 @@ body{
     height: 100vh;
     max-width: 50%;
     padding: 0 5%;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    margin-top: 3%;
+    margin-top: 15rem;
 }
 .group-child {
     padding-left: 8%;
@@ -450,14 +448,15 @@ body{
 
   /* Basic styling for the card */
   .about-section {
+    position: relative;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 100vh;
     margin: 0;
 }
   .card {
+    
     position: relative;
     border-radius: 40px;
     background-color: rgba(46, 76, 107, 0.4);
@@ -465,6 +464,7 @@ body{
     width: 80%;
     height: 710px;
     overflow: hidden;
+    top: 7rem;
 }
 
 .card::before {
@@ -482,7 +482,7 @@ body{
 }
 
 .card-content {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 30%;
     transform: translate(-50%, -50%);
@@ -571,14 +571,42 @@ align-items: center;
     .frame-parent {
         position: relative;
         width: 90%; /* Use percentage value for flexibility */
-        max-width: 100%; /* Add max-width to prevent it from growing too large */
+        max-width: 100vw; /* Add max-width to prevent it from growing too large */
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: flex-start;
         gap: 25px; /* Adjust the gap as needed */
         text-align: left;
-        font-size: 24px;
+        font-size: 4vw;
+        color: #26aafb;
+        font-family: Poppins;
+    }
+    .frame-parent1 {
+        position: relative;
+        width: 53.5%; /* Use percentage value for flexibility */
+        max-width: 100vw; /* Add max-width to prevent it from growing too large */
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 25px; /* Adjust the gap as needed */
+        text-align: left;
+        font-size: 4vw;
+        color: #26aafb;
+        font-family: Poppins;
+    }
+    .frame-parent2 {
+        position: relative;
+        width: 35%; /* Use percentage value for flexibility */
+        max-width: 100vw; /* Add max-width to prevent it from growing too large */
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 25px; /* Adjust the gap as needed */
+        text-align: left;
+        font-size: 4vw;
         color: #26aafb;
         font-family: Poppins;
     }
@@ -592,8 +620,8 @@ align-items: center;
         align-items: center;
         gap: 10%;
     }
-    .python, .php, .javascript, .css, .html5, .react, .tailwindcss, .bootstrap, .django, .laravel, .vs-code, .figma, .pgadmin, .github, .git img {
-        max-width: 100%; /* Make the image responsive */
+    .python, .php, .javascript, .css, .html5, .react, .tailwindcss, .bootstrap, .django, .laravel, .vs-code, .figma, .pgadmin, .github, .git, img {
+        width: 2vw; /* Make the image responsive */
         height: auto;
         margin-right: 10px; /* Add spacing between the image and text */
         justify-content:space-around;
@@ -847,7 +875,7 @@ align-items: center;
             -webkit-background-clip: text;
             color: transparent;
             display: inline;
-            font-size: 1.5vw;
+            font-size: 1vw;
         }
         .footerbtn {
             display: flex;
@@ -856,7 +884,7 @@ align-items: center;
         
         .footerlink img {
             transition: transform 0.3s ease-in-out; /* Adjust the duration and easing as needed */
-            width: 3vw;
+            width: 2vw;
         }
         
         .footerlink:hover img {
@@ -926,39 +954,34 @@ align-items: center;
 
 /* Media query for screens up to 768px */
 @media screen and (max-width: 768px) {
-    nav{
-        display: none;
+    nav {
+        display: none; /* Add this line */
     }
-    nav ul{
+    nav.mobile-nav .scrolled{
+        display: none; /* Add this line */
+    }
+    .mobile-nav img{
+        padding-top: 5%;
+    margin-left: 5%;
+    width: 18vw;
+
+    }
+    .menu-icon img{
+        width: 10vw;
+    }
+    nav.mobile-nav{
+        display: flex;
         width: 100%;
-        /* Adjust padding for smaller screens */
+        justify-content: space-between;
+        gap: 85%;
+        padding-left: 5%;
     }
-
-    nav ul {
-        flex-direction: column; /* Stack items vertically */
-        text-align: center;
+    .footerlink img{
+        width: 5vw;
     }
-
-    nav ul li {
-        margin-bottom: 10px; /* Add spacing between items */
-    }
-
-    .menu-icon {
-        display: block; /* Show the menu icon */
-        cursor: pointer;
-    }
-
-    /* Style the menu icon */
-    .menu-icon div {
-        width: 25px;
-        height: 3px;
-        background-color: #2CCCFF;
-        margin: 5px 0;
-        transition: background-color 0.3s ease;
-    }
-
-    /* Change menu icon color on hover */
-    .menu-icon:hover div {
-        background-color: #00a5c0;
+    .footer-text {
+        color: transparent;
+        display: inline;
+        font-size: 2vw;
     }
 }
