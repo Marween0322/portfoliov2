@@ -14,7 +14,7 @@ I*::before{
 body{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     margin: 0;
     font-family: "poppins";
     height: 100vh;
@@ -35,14 +35,15 @@ body{
     width: 119.09px;
     height: 41px;
     flex-shrink: 0;
+    margin-top: -2%;
     }
     nav {
         background-color: transparent;
         position: fixed;
         z-index: 100;
         transition: background-color 0.3s, backdrop-filter 0.3s; /* Added backdrop-filter transition */
-        height: 10%;
-        width: 100%;
+        height: 12%;
+        width: 100vw;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -93,6 +94,9 @@ body{
         backdrop-filter: blur(10px); /* Blur effect when scrolled */
     }
     
+    nav.mobile-nav, .mobile-menu-container{
+    display: none;
+    }
 
 .header-section {
     font-family: 'Poppins', sans-serif;
@@ -104,6 +108,7 @@ body{
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
+    margin-top: 3%;
 }
 .group-child {
     padding-left: 8%;
@@ -115,7 +120,7 @@ body{
     }
 .welcome{
     display: flex;
-    font-size: 35px;
+    font-size: 2vw;
     font-family: 'Poppins', sans-serif;
     color: #00a2ffc9;
     text-align: left;
@@ -123,11 +128,12 @@ body{
     
 }
 .content__container {
-    font-weight: 600px;
+    
     overflow: hidden;
     height: 80px;
     padding: 0 45px;
     position: relative;
+    
   }
 
   .content__container:before {
@@ -136,7 +142,7 @@ body{
     top: 20%;
     left: 0;
     color: #16a085;
-    font-size: 70px;
+    font-size: 3.5vw;
     line-height: 40px;
     opacity: 0;
     animation: opacity 2s infinite;
@@ -148,7 +154,7 @@ body{
     top: 20%;
     right: 0;
     color: #16a085;
-    font-size: 70px;
+    font-size: 3.5vw;
     line-height: 40px;
     opacity: 0;
     animation: opacity 2s infinite;
@@ -216,12 +222,12 @@ body{
 .content__container__list .content__container__list__item{
     display: flex;
     font-family: 'Poppins', sans-serif;
-    font-size: 100px;
+    font-size: 5vw;
     text-align: left;
     width: 180%;
     color: #55e8ff;
     margin-bottom: 0;
-    margin-top: 1.5%;
+    margin-top: 2%;
 }
 .content__container__list .content__container__list__item span{
     color: #ff9d00;
@@ -477,7 +483,7 @@ body{
 
 .card-content {
     position: absolute;
-    top: 42%;
+    top: 50%;
     left: 30%;
     transform: translate(-50%, -50%);
     text-align: left;
@@ -488,7 +494,7 @@ body{
 
 .card-content h2 {
     margin: 0;
-    font-size: 70px;
+    font-size: 3vw;
 }
 .card-content2 {
 position: absolute;
@@ -502,14 +508,17 @@ display: flex; /* Add flex display to allow justify-content and align-items */
 justify-content: center;
 align-items: center;
 }
-.card-content2 img{
-    border-radius: 0px 0px 0px 138px;
+.card-content2 img {
+    border-radius: 0px 0px 0px 9rem;
     box-shadow: 5px 5px 15px #26a9fb76;
+    object-fit:fill; /* This property preserves the aspect ratio while filling the container */
+    width: 120%; /* Ensure the image covers the entire container */
+    height: 120%; /* Ensure the image covers the entire container */
 }
 .about-section p{
     font-family: 'Poppins', sans-serif;
     display: flex;
-    font-size: 15px;
+    font-size: 1vw;
     color: #ffffff;
     text-align: left;
     display: inline-block;
@@ -578,7 +587,7 @@ align-items: center;
         text-decoration: none;
         color: #26aafb;
         font-family: Poppins;
-        font-size: 24px;
+        font-size: 1.5vw;
         display: flex;
         align-items: center;
         gap: 10%;
@@ -619,12 +628,18 @@ align-items: center;
     }
     
     #myImageButton img {
-        margin-left: 85%;
-        margin-top: 18%;
-        width: 50px; /* Adjust the width as needed */
-        height: 50px; /* Adjust the height as needed */
-        
+        margin-left: 88%;
+        margin-top: 24%;
+        width: 30px; /* Adjust the width as needed */
+        height: 30px; /* Adjust the height as needed */
+        border-radius: 0%;
+        transition: transform 0.3s ease-in-out; /* Adjust the duration and easing as needed */
     }
+    
+    #myImageButton:hover img {
+        transform: scale(1.2); /* Adjust the scale factor for the zoom effect */
+    }
+    
     
     .project img {
     width: 50%;
@@ -637,7 +652,7 @@ align-items: center;
 
     .project h2{
         position: relative;
-        font-size: 35px;
+        font-size: 2vw;
         width: 80%; /* Use percentage value for flexibility */
         max-width: 100%; /* Add max-width to prevent it from growing too large */
         display: flex;
@@ -647,33 +662,42 @@ align-items: center;
     .project p{
         position: relative;
         display: flex;
-        font-size: 18px;
+        font-size: 1vw;
         width: 95%; /* Use percentage value for flexibility */
         max-width: 100%; /* Add max-width to prevent it from growing too large */
-        margin-top: -5%;
+        margin-top: -2%;
         color: #ffffff;
         font-family: Poppins;
     }
     
+    /* Add this to your existing CSS */
+
     .project-wrapper {
         border-radius: 10px;
         border: 1px solid #26aafb;
         box-sizing: border-box;
-        width: 20%; /* Use percentage value for flexibility */
-        max-width: 300px; /* Add max-width to prevent it from growing too large */
+        width: 7vw; /* Set the width to 7vw */
+        max-width: 300px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         padding: 10px;
         z-index: 0;
+        transition: transform 0.3s ease-in-out; /* Adjust the duration and easing as needed */
     }
+    
+
+.project-wrapper:hover {
+    transform: scale(1.1); /* Adjust the scale factor for the zoom effect */
+}
+
 
     .ppython, .pphp, .pjavascript, .pcss, .phtml5, .preact, .ptailwindcss, .pbootstrap, .pdjango, .plaravel, .pvs-code, .pfigma, .ppgadmin, .pgithub, .pgit {
         text-decoration: none;
         color: #26aafb;
         font-family: Poppins;
-        font-size: 10px;
+        font-size: 0.8vw;
         display: flex;
         align-items: center;
         gap: 5%;
@@ -732,7 +756,7 @@ align-items: center;
     
         .project1 h2{
             position: relative;
-            font-size: 35px;
+            font-size: 2vw;;
             width: 80%; /* Use percentage value for flexibility */
             max-width: 100%; /* Add max-width to prevent it from growing too large */
             display: flex;
@@ -742,10 +766,10 @@ align-items: center;
         .project1 p{
             position: relative;
             display: flex;
-            font-size: 18px;
+            font-size: 1vw;
             width: 95%; /* Use percentage value for flexibility */
             max-width: 100%; /* Add max-width to prevent it from growing too large */
-            margin-top: -5%;
+            margin-top: -2%;
             color: #ffffff;
             font-family: Poppins;
         }
@@ -788,16 +812,21 @@ align-items: center;
             display: flex;
             justify-content: center; /* Center horizontally */
             align-items: center; /* Center vertically */
-            width: 75%; /* Ensure it spans the full width */
+            width: 76%; /* Ensure it spans the full width */
             margin-top: 15px; /* Add margin for spacing */
-            margin-left: 10%;
+            margin-left: 11%;
             gap: 2%;
         }
 
         .small-image {
             width: 33%;
             height: 33%;
-            /* Add any additional styles for your images */
+            transition: transform 0.3s ease-in-out; /* Adjust the duration and easing as needed */
+            border-radius: 2%;
+        }
+        
+        .small-image:hover {
+            transform: scale(1.1); /* Adjust the scale factor for the zoom effect */
         }
 
         footer {
@@ -818,10 +847,118 @@ align-items: center;
             -webkit-background-clip: text;
             color: transparent;
             display: inline;
+            font-size: 1.5vw;
         }
         .footerbtn {
             display: flex;
             gap: 30px; /* Adjust the gap value as needed */
         }
-
         
+        .footerlink img {
+            transition: transform 0.3s ease-in-out; /* Adjust the duration and easing as needed */
+            width: 3vw;
+        }
+        
+        .footerlink:hover img {
+            transform: scale(1.2); /* Adjust the scale factor for the zoom effect */
+        }
+
+        /* Your existing styles here */
+
+/* Media query for screens between 1024px and 768px */
+@media screen and (max-width: 1024px) {
+    nav {
+        width: 105%;
+    }
+    #navbar.logo img {
+        width: 80%; /* Adjust the width as needed */
+        height: 40px; /* Adjust the height as needed */
+        margin-left: -100px; /* Add a positive margin for spacing, adjust as needed */
+        margin-top: 5px;
+        /* Additional styles for positioning and responsiveness */
+        display: inline-block; /* Ensure the logo is treated as a block element */
+        vertical-align: middle; /* Align the logo vertically within the line-height */
+    }
+    nav ul {
+        gap: 40px;
+    }
+    nav ul li a {
+        font-size: 10px;
+    }
+
+    .content__container__list .content__container__list__item{
+        margin-bottom: -5%;
+        margin-top: 4%;
+    }
+    .card {
+        width: 80%;
+        height: 500px;
+    }
+    .card::before {
+        top: 13rem;
+        left: -10px;; /* Adjust this value to match the card's border-radius */
+    }
+    .about-section p{
+        
+        font-size: 1.2vw;
+        
+    }
+    .card-content2 img {
+        border-radius: 0px 0px 0px 7rem;
+    }
+    .content{
+        font-size: 4.5vw;
+    }
+    #myImageButton img {
+        margin-left: 78%;
+        margin-top: 22%;/* Adjust the duration and easing as needed */
+        width: 2vw;
+        height: 2vw;
+    }
+    .project-title{
+        font-size: 4.5vw;
+    }
+
+}
+
+
+
+
+/* Media query for screens up to 768px */
+@media screen and (max-width: 768px) {
+    nav{
+        display: none;
+    }
+    nav ul{
+        width: 100%;
+        /* Adjust padding for smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Add spacing between items */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon */
+        cursor: pointer;
+    }
+
+    /* Style the menu icon */
+    .menu-icon div {
+        width: 25px;
+        height: 3px;
+        background-color: #2CCCFF;
+        margin: 5px 0;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Change menu icon color on hover */
+    .menu-icon:hover div {
+        background-color: #00a5c0;
+    }
+}
