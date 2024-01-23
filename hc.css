@@ -1165,7 +1165,7 @@ align-items: center;
 
     
 }
-@media only screen and (max-width: 414px){
+@media only screen and (min-width: 300px) and (max-width: 600px){
     
     nav {
         display: none; /* Add this line */
@@ -1226,7 +1226,7 @@ align-items: center;
         margin-top: -450%;
     }
     .card::before {
-        top: 18rem;/* Adjust this value to match the card's border-radius */
+        top: 22rem;/* Adjust this value to match the card's border-radius */
     }
     .content__container {
         overflow: hidden;
