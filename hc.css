@@ -30,7 +30,7 @@ body {
     nav img {
     padding-top: 2%;
     margin-left: -10%;
-    width: 8vw;
+    width: 5vw;
     align-self: flex-start;
     text-decoration: none;
     color: inherit;
@@ -118,7 +118,7 @@ body {
     }
 .welcome{
     display: flex;
-    font-size: 2vw;
+    font-size: 40px;
     font-family: 'Poppins', sans-serif;
     color: #00a2ffc9;
     text-align: left;
@@ -1165,7 +1165,7 @@ align-items: center;
 
     
 }
-@media only screen and (max-width: 390px){
+@media only screen and (max-width: 414px){
     
     nav {
         display: none; /* Add this line */
@@ -1192,20 +1192,30 @@ align-items: center;
     }
     .header-section{
         margin-top: 40%;
+        margin-left: -1%;
         width: 40%;
     }
+    .content__container__list {
+        margin-top: -2%;
+    }
     .header-section .left p{
-        font-size: 2.3vw;
+        font-size: 3.2vw;
     }
     .card{
-        height: 80%;
+        height: 90%;
+    }
+    .card h2{
+        font-size: 25px;
+        margin-left: 55%;
+        margin-top: -5%;
     }
     .card-content{
         margin-top: 2%;
+
     }
     .card-content p{
-        margin-top: 210%;
-        font-size: 2.8vw;
+        margin-top: 220%;
+        font-size: 3.2vw;
     }
     .card-content2 img {
         border-radius: 10px 10px 10px 5rem;
@@ -1213,14 +1223,21 @@ align-items: center;
         object-fit:fill; /* This property preserves the aspect ratio while filling the container */
         width: 260%; /* Ensure the image covers the entire container */
         height: 120%; /* Ensure the image covers the entire container */
-        margin-top: -350%;
+        margin-top: -450%;
     }
-
-    .content__container{
-        margin-top: -10%;
-        width: 55%;
-        height: 7%;
+    .card::before {
+        top: 18rem;/* Adjust this value to match the card's border-radius */
     }
+    .content__container {
+        overflow: hidden;
+        margin-top: -18px;
+        font-size: 20px;
+        height: 55px;
+        width: 70%;
+        padding: 0px 60px;
+        position: relative;
+        
+      }
     .content__container__list .content__container__list__item{
         margin-bottom: -5%;
         margin-left: -23%;
@@ -1232,17 +1249,17 @@ align-items: center;
         font-size: 3vw;
     }
     .welcome{
-        font-size: 2.6vw;
-        width: 50%;
+        font-size: 17px;
+        width: 95%;
     }
     .header-section .left h1 {
-        font-size: 8vw; /* Responsive font size based on viewport width */
-        width: 100%; /* Adjusted to 100% for responsiveness */
+        font-size: 38px; /* Responsive font size based on viewport width */
+        width: 120%; /* Adjusted to 100% for responsiveness */
     }
     .group-child {
         margin-right: 25px;
         margin-top: -5%;
-        height: 300px;
+        height: 370px;
         }
         .joblink {
             margin-top: -41px;
@@ -1270,13 +1287,12 @@ align-items: center;
             width:fit-content;
             gap: 1%;
         }
-        .project-title{
-            font-size: 7vw;
-        }
         .skills {
             font-size: 5vw;
         }
-    
+        .project-title{
+            font-size: 7vw;
+        }
         .languag-wrapper {
             margin-bottom: 10px;
             flex-basis: 45%;
@@ -1291,4 +1307,110 @@ align-items: center;
             margin-bottom: 8%;
             font-size: 5vw;
         }
+        .project {
+            display: flex;
+            flex-direction: column;
+            max-width: 80%;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .project1 {
+            display: flex;
+            flex-direction: column;
+            max-width: 80%;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project img {
+            width: 93%;
+            border-radius: 20px;
+        }
+        
+        .project1 img {
+            width: 93%;
+            border-radius: 20px;
+        }
+        .project-content {
+            flex-grow: 1;
+            padding-left: 10%;
+        }
+        
+        .project-content h2 {
+            width: 100%;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        .project-content p {
+            font-size: 0.8em;
+            margin-bottom: 20px;
+        }
+        
+        .project-parent {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+        }
+        
+        .project-wrapper {
+            border-radius: 10px;
+            border: 1px solid #26aafb;
+            box-sizing: border-box;
+            width: 30%;
+            height: 50%; /* Set the width to 7vw */
+            max-width: 300px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            z-index: 0;
+            transition: transform 0.3s ease-in-out; /* Adjust the duration and easing as needed */
+        }
+        
+        .project-wrapper a {
+            font-size: 2.5vw;
+            text-decoration: none;
+            border-radius: 8px;
+            color: #26aafb;
+
+        }
+        
+        .project-wrapper img {
+            max-width: 50%;
+            height: auto;
+            margin-bottom: 5px;
+        }
+        
+        #myImageButton img {
+            max-width: 50%;
+            margin-top: 5%;
+            margin-left: 80%;
+            height: auto;
+        }
+        .small-image-container {
+            flex-wrap: wrap; /* Allow small images to wrap to the next line */
+        }
+    
+        .small-image {
+            width: 100%;
+            margin-bottom: 10%;
+             /* Adjust the width for two images per row */
+        }
+        .footer-text{
+            font-size: 3vw;
+        }
+        /* Media query for screens with a width of 390px or smaller */
+        .footerbtn {
+            display: flex;
+            gap: 5px; /* Adjust the gap value as needed */
+        }
+        
+        .footerlink img {
+            transition: transform 0.3s ease-in-out; /* Adjust the duration and easing as needed */
+            width: 8vw;
+        }
+
+
     }
