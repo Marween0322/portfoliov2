@@ -975,7 +975,7 @@ align-items: center;
     .mobile-nav img{
     padding-top: 5%;
     margin-left: 1%;
-    width: 10vw;
+    width: 15%;
 
     }
     .menu-icon img{
@@ -1176,7 +1176,7 @@ align-items: center;
     .mobile-nav img{
     padding-top: 10%;
     margin-left: -1%;
-    width: 12vw;
+    width: 30%;
 
     }
     .menu-icon img{
@@ -1188,7 +1188,7 @@ align-items: center;
         width: 100%;
         height: fit-content;
         justify-content: space-between;
-        gap: 160%;
+        gap: 140%;
     }
     .header-section{
         margin-top: 40%;
