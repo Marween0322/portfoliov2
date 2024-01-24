@@ -108,6 +108,9 @@ body {
     padding: 0 5%;
     margin-top: 15rem;
 }
+.header-section .left h2{
+    display: none;
+}
 .group-child {
     padding-left: 8%;
     margin-right: 100px;
@@ -921,7 +924,9 @@ align-items: center;
     nav ul li a {
         font-size: 10px;
     }
-
+    .header-section .left h2{
+        display: none;
+    }
     .content__container__list .content__container__list__item{
         margin-bottom: -5%;
         margin-top: 4%;
@@ -965,7 +970,7 @@ align-items: center;
 
 
 /* Media query for screens up to 768px */
-@media screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
     nav {
         display: none; /* Add this line */
     }
@@ -992,8 +997,12 @@ align-items: center;
     main{
         justify-content: space-around;
     }
-
-    
+    .welcome{
+        font-size: 3vw;
+    }
+    .header-section .left h2{
+        display: none;
+    }
     .header-section .left p{
         font-size: 2.2vw;
     }
@@ -1162,32 +1171,50 @@ align-items: center;
         display: inline;
         font-size: 2vw;
     }
+    
 
     
 }
-@media only screen and (min-width: 401px) and (max-width: 601px){
+@media only screen and (min-width: 576px) and (max-width: 767px) {
     nav {
-        display: none; /* Add this line */
+        display: none; /* Hide the nav by default */
     }
-    nav.mobile-nav .scrolled{
-        display: none; /* Add this line */
+    
+    nav.mobile-nav .scrolled {
+        display: none; /* Hide the scrolled nav by default */
     }
-    .mobile-nav img{
-    padding-top: 10%;
-    margin-left: -1%;
-    width: 30%;
-
-    }
-    .menu-icon img{
-        margin-top: 10%;
-        width: 12vw;
-    }
-    nav.mobile-nav{
-        display: flex;
-        width: 100%;
-        height: fit-content;
+    
+    .mobile-nav {
+        display: none; /* Hide the mobile-nav by default */
         justify-content: space-between;
-        gap: 16rem;
+        align-items: center;
+        padding: 10px;
+        height: auto;
+    }
+    
+    .main-logo {
+        max-width: 50%;
+        margin-left: 3%;
+        height: auto;
+    }
+    
+    .menu-icon {
+        display: flex;
+    }
+    
+    .mobile-nav img {
+        width: 11vw;
+    }
+    
+    .menu-icon img {
+        margin-top: -0.3rem;
+        width: 12vw;
+        margin-left: -30%;
+    }
+    nav.mobile-nav {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
     }
     .header-section{
         margin-top: 40%;
@@ -1195,37 +1222,61 @@ align-items: center;
         width: 40%;
     }
     .content__container__list {
-        margin-top: -2%;
+        font-size: 4vw;
+        margin-top: -6%;
+        margin-left: 25px;
+        width:fit-content;
+        align-items: start;
+        justify-content: flex-start;
+        
+    }
+    .header-section .left h1{
+        display: none;
+    }
+    .header-section .left h2{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: 9vw; /* Responsive font size based on viewport width */
+    text-align: left;
+    width: 120%; /* Adjusted to 100% for responsiveness */
+    margin-left: 3px;
+    color: #55e8ff;
+    margin-bottom: 0;
+    margin-top: 0;
     }
     .header-section .left p{
         font-size: 3.2vw;
     }
     .card{
-        height: 90%;
+        height: 130vw;
     }
     .card h2{
-        font-size: 25px;
-        margin-left: 55%;
-        margin-top: -5%;
+        font-size: 5vw;
+        margin-left: 60%;
+        margin-top: -10%;
+        width: 150%;
     }
     .card-content{
         margin-top: 2%;
 
     }
     .card-content p{
-        margin-top: 220%;
-        font-size: 3.2vw;
+        margin-top: 170%;
+        width: 200%;
+        font-size: 2.5vw;
     }
     .card-content2 img {
-        border-radius: 10px 10px 10px 5rem;
-        box-shadow: 5px 5px 15px #26a9fb76;
-        object-fit:fill; /* This property preserves the aspect ratio while filling the container */
-        width: 260%; /* Ensure the image covers the entire container */
+        display: flex;
+        border-radius: 5% 5% 5% 7rem;
+        box-shadow: 5px 5px 15px #26a9fb76; /* This property preserves the aspect ratio while filling the container */
+        width: 45vw; /* Ensure the image covers the entire container */
         height: 120%; /* Ensure the image covers the entire container */
-        margin-top: -450%;
+        margin-top: -110%;
+        margin-left: -90%;
     }
     .card::before {
-        top: 22rem;/* Adjust this value to match the card's border-radius */
+        width: 200vw;
+        top: 55vw;/* Adjust this value to match the card's border-radius */
     }
     .content__container {
         overflow: hidden;
@@ -1243,9 +1294,14 @@ align-items: center;
         margin-top: 9%;
         font-size: 170%;
     }
-    .btndark{
-        margin-top: 10px;
-        font-size: 3vw;
+    .btndark {
+        font-size: 16px; /* Adjust the font size for smaller screens */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin-top: 10px;
+    height: 4%;
+    width: 90%;
     }
     .welcome{
         font-size: 17px;
@@ -1258,36 +1314,47 @@ align-items: center;
     .group-child {
         margin-right: 25px;
         margin-top: -5%;
-        height: 370px;
+        height: 95vw;
+        }
+        .Btnli, .Btnin, .Btnka {
+            margin-top: 10px;
+            margin-left: -5px; /* Adjust the spacing between the links */
+            display: block; /* Ensure each link takes the full width on small screens *//* Center the text within the links */
+            font-size: 16px; /* Center the text within the links */
         }
         .joblink {
-            margin-top: -41px;
-            margin-left: 120px;
-            width: 65%; /* Reset the left margin for smaller screens */
+            margin-top: 5px;
+            margin-left: 0.5vw;
+            width: 100%; /* Reset the left margin for smaller screens */
              /* Stack buttons vertically on smaller screens */
-            align-items: flex-start; /* Align buttons to the left on smaller screens */
+            align-items: flex-start;
         }
         .joblink a img {
             width: 80%;
             margin-left: 8px; /* Adjust the value as needed for the desired gap between images */
+            margin-top: 10%;
         }
         .joblink a {
             margin-bottom: 10px; /* Add margin between buttons on smaller screens */
         }
         .frame-parent{
-            width:fit-content;
+            width: 80%;
+            height: 50vw;
             gap: 1%;
         }
         .frame-parent1{
-            width:fit-content;
+            width: 80%;
             gap: 1%;
         }
         .frame-parent2{
-            width:fit-content;
+            width: 80%;
             gap: 1%;
         }
+        .skills-section{
+            margin-top: 80%;
+        }
         .skills {
-            font-size: 5vw;
+            font-size: 1.5Svw;
         }
         .project-title{
             font-size: 7vw;
@@ -1332,7 +1399,7 @@ align-items: center;
         }
         .project-content {
             flex-grow: 1;
-            padding-left: 10%;
+            padding-left: 5%;
         }
         
         .project-content h2 {
@@ -1383,7 +1450,7 @@ align-items: center;
         }
         
         #myImageButton img {
-            max-width: 50%;
+            width: 5vw;
             margin-top: 5%;
             margin-left: 80%;
             height: auto;
@@ -1410,31 +1477,48 @@ align-items: center;
             transition: transform 0.3s ease-in-out; /* Adjust the duration and easing as needed */
             width: 8vw;
         }
-}
-@media only screen and (min-width: 300px) and (max-width: 400px){
+  }
+@media only screen and (min-width: 320px) and (max-width: 575px){
     
     nav {
-        display: none; /* Add this line */
+        display: none; /* Hide the nav by default */
     }
-    nav.mobile-nav .scrolled{
-        display: none; /* Add this line */
+    
+    nav.mobile-nav .scrolled {
+        display: none; /* Hide the scrolled nav by default */
     }
-    .mobile-nav img{
-    padding-top: 10%;
-    margin-left: -1%;
-    width: 30%;
-
-    }
-    .menu-icon img{
-        margin-top: 10%;
-        width: 12vw;
-    }
-    nav.mobile-nav{
-        display: flex;
-        width: 100%;
-        height: fit-content;
+    
+    .mobile-nav {
+        display: none; /* Hide the mobile-nav by default */
         justify-content: space-between;
-        gap: 140%;
+        align-items: center;
+        padding: 10px;
+        height: auto;
+    }
+    
+    .main-logo {
+        max-width: 50%;
+        margin-left: 3%;
+        height: auto;
+    }
+    
+    .menu-icon {
+        display: flex;
+    }
+    
+    .mobile-nav img {
+        width: 11vw;
+    }
+    
+    .menu-icon img {
+        margin-top: -0.3rem;
+        width: 12vw;
+        margin-left: -30%;
+    }
+    nav.mobile-nav {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
     }
     .header-section{
         margin-top: 40%;
@@ -1442,37 +1526,61 @@ align-items: center;
         width: 40%;
     }
     .content__container__list {
-        margin-top: -2%;
+        font-size: 4vw;
+        margin-top: -6%;
+        margin-left: 25px;
+        width:fit-content;
+        align-items: start;
+        justify-content: flex-start;
+        
+    }
+    .header-section .left h1{
+        display: none;
+    }
+    .header-section .left h2{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: 9vw; /* Responsive font size based on viewport width */
+    text-align: left;
+    width: 120%; /* Adjusted to 100% for responsiveness */
+    margin-left: 3px;
+    color: #55e8ff;
+    margin-bottom: 0;
+    margin-top: 0;
     }
     .header-section .left p{
         font-size: 3.2vw;
     }
     .card{
-        height: 90%;
+        height: 130vw;
     }
     .card h2{
-        font-size: 25px;
-        margin-left: 55%;
-        margin-top: -5%;
+        font-size: 5vw;
+        margin-left: 60%;
+        margin-top: -10%;
+        width: 150%;
     }
     .card-content{
         margin-top: 2%;
 
     }
     .card-content p{
-        margin-top: 220%;
-        font-size: 3.2vw;
+        margin-top: 170%;
+        width: 200%;
+        font-size: 2.5vw;
     }
     .card-content2 img {
-        border-radius: 10px 10px 10px 5rem;
-        box-shadow: 5px 5px 15px #26a9fb76;
-        object-fit:fill; /* This property preserves the aspect ratio while filling the container */
-        width: 260%; /* Ensure the image covers the entire container */
+        display: flex;
+        border-radius: 5% 5% 5% 5rem;
+        box-shadow: 5px 5px 15px #26a9fb76; /* This property preserves the aspect ratio while filling the container */
+        width: 45vw; /* Ensure the image covers the entire container */
         height: 120%; /* Ensure the image covers the entire container */
-        margin-top: -450%;
+        margin-top: -110%;
+        margin-left: -90%;
     }
     .card::before {
-        top: 22rem;/* Adjust this value to match the card's border-radius */
+        width: 200vw;
+        top: 55vw;/* Adjust this value to match the card's border-radius */
     }
     .content__container {
         overflow: hidden;
@@ -1490,9 +1598,14 @@ align-items: center;
         margin-top: 9%;
         font-size: 170%;
     }
-    .btndark{
-        margin-top: 10px;
-        font-size: 3vw;
+    .btndark {
+        font-size: 16px; /* Adjust the font size for smaller screens */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin-top: 10px;
+    height: 4%;
+    width: 90%;
     }
     .welcome{
         font-size: 17px;
@@ -1505,36 +1618,46 @@ align-items: center;
     .group-child {
         margin-right: 25px;
         margin-top: -5%;
-        height: 370px;
+        height: 95vw;
+        }
+        .Btnli, .Btnin, .Btnka {
+            margin-top: 10px;
+            margin-left: -5px; /* Adjust the spacing between the links */
+            display: block; /* Ensure each link takes the full width on small screens *//* Center the text within the links */
+            font-size: 16px; 
+            height: 50px;
+            width: 50px;/* Center the text within the links */
         }
         .joblink {
-            margin-top: -41px;
-            margin-left: 120px;
-            width: 65%; /* Reset the left margin for smaller screens */
+            margin-top: 5px;
+            margin-left: 0.5vw;
+            width: 100%;/* Reset the left margin for smaller screens */
              /* Stack buttons vertically on smaller screens */
-            align-items: flex-start; /* Align buttons to the left on smaller screens */
+            align-items: flex-start;
         }
         .joblink a img {
             width: 80%;
             margin-left: 8px; /* Adjust the value as needed for the desired gap between images */
+            margin-top: 10%;
         }
         .joblink a {
             margin-bottom: 10px; /* Add margin between buttons on smaller screens */
         }
         .frame-parent{
-            width:fit-content;
+            width: 80%;
+            height: 50vw;
             gap: 1%;
         }
         .frame-parent1{
-            width:fit-content;
+            width: 80%;
             gap: 1%;
         }
         .frame-parent2{
-            width:fit-content;
+            width: 80%;
             gap: 1%;
         }
         .skills {
-            font-size: 5vw;
+            font-size: 1.5Svw;
         }
         .project-title{
             font-size: 7vw;
@@ -1579,7 +1702,7 @@ align-items: center;
         }
         .project-content {
             flex-grow: 1;
-            padding-left: 10%;
+            padding-left: 5%;
         }
         
         .project-content h2 {
@@ -1630,7 +1753,7 @@ align-items: center;
         }
         
         #myImageButton img {
-            max-width: 50%;
+            width: 5vw;
             margin-top: 5%;
             margin-left: 80%;
             height: auto;
@@ -1660,3 +1783,4 @@ align-items: center;
 
 
     }
+   
