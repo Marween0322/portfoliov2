@@ -1,7 +1,7 @@
 :root{
     --orange-color: #FF8D24;
     --dack-blue-color: #2F505F;
-    --dark-green-color: #3894A3;
+    --dark-green-color: #44E5FF;
     --white-color: #F1F1EF;
     --light-green-color: #C7DAD4;
 }
@@ -468,6 +468,7 @@ body {
     height: 710px;
     overflow: hidden;
     top: 7rem;
+    flex-direction: column;
 }
 
 .card::before {
@@ -545,6 +546,7 @@ align-items: center;
 
         }
         .skills {
+            height: auto;
             position: relative;
             width: 90%;
             padding-top: 5%;
