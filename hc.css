@@ -1545,6 +1545,10 @@ align-items: center;
     .left{
         height: 50%;
     }
+    .btndark{
+        font-size: 25px !important;
+        height: 10%!important;
+    }
     .header-section .left h1{
         display: none;
     }
