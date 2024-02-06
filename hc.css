@@ -269,7 +269,7 @@ body {
 
 .btndark:hover {
     padding: 10px 30px;
-    border: 2px solid #00A5C0;
+    border: 2px solid #ffffff;
     color: #3895a3;
     background-color: #ffffff;
     display: inline-block;
@@ -1549,6 +1549,13 @@ align-items: center;
         font-size: 25px !important;
         height: 10%!important;
     }
+    .Btnli, .Btnin, .Btnka,
+    .Btnli:hover, .Btnin:hover, .Btnka:hover,
+    .Btnli:hover .Btnin:hover, .Btnka:hover .text {
+        width: 20%;
+        border-radius: 10;
+        box-shadow: none;
+    }
     .header-section .left h1{
         display: none;
     }
@@ -1622,6 +1629,11 @@ align-items: center;
     height: 4%;
     width: 90%;
     }
+    .btndark:hover {
+       text-align: center;
+       padding-bottom: 10%;
+    }
+    
     .welcome{
         font-size: 17px;
         width: 95%;
@@ -1643,6 +1655,7 @@ align-items: center;
             height: 50px;
             width: 50px;/* Center the text within the links */
         }
+        
         .joblink {
             margin-top: 5px;
             margin-left: 0.5vw;
