@@ -1819,7 +1819,7 @@ align-items: center;
 
 
     }
-    @media only screen and (min-width: 300px) and (max-width: 401px){
+    @media only screen and (min-width: 300px) and (max-width: 460px){
         .card {
             height: 180vw;
         }
@@ -1844,5 +1844,8 @@ align-items: center;
             
             background: url('images/Intersect\ \(1\).png') center/contain no-repeat;
              /* Adjust this value to match the card's border-radius */
+        }
+        .skills-section{
+            margin-top: 60%;
         }
     }
