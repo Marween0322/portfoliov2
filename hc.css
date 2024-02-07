@@ -857,6 +857,7 @@ align-items: center;
             margin-top: 15px; /* Add margin for spacing */
             margin-left: 11%;
             gap: 2%;
+            
             flex-wrap: wrap; /* Add flex-wrap to allow items to wrap to the next line */
         }
         
@@ -864,9 +865,9 @@ align-items: center;
         .small-image {
             width: 33%;
             height: 33%;
-            
             transition: transform 0.3s ease-in-out; /* Adjust the duration and easing as needed */
             border-radius: 2%;
+            margin-bottom: 20px;
         }
         
         .small-image:hover {
