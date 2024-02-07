@@ -1579,7 +1579,7 @@ align-items: center;
     .card h2{
         font-size: 5vw;
         margin-left: 60%;
-        margin-top: -10%;
+        margin-top: 10%;
         width: 150%;
     }
     .card-content{
@@ -1589,7 +1589,8 @@ align-items: center;
     .card-content p{
         margin-top: 170%;
         width: 200%;
-        font-size: 2.5vw;
+        font-size: 2.9vw;
+        text-shadow: #152331;
     }
     .card-content2 img {
         display: flex;
@@ -1602,8 +1603,11 @@ align-items: center;
     }
     .card::before {
         width: 200vw;
-        top: 55vw;/* Adjust this value to match the card's border-radius */
+        top: 40vw;/* Adjust this value to match the card's border-radius */
+        left: -200px;
+        background: url('images/Intersect\ \(1\).png') center/contain no-repeat;
     }
+    
     .content__container {
         overflow: hidden;
         margin-top: -18px;
@@ -1815,4 +1819,30 @@ align-items: center;
 
 
     }
-   
+    @media only screen and (min-width: 300px) and (max-width: 401px){
+        .card {
+            height: 180vw;
+        }
+        .card-content h2{
+            padding-bottom: 50%;
+            margin-left: 50%;
+            font-size: 7vw;
+        }
+        .card-content p{
+            padding-bottom: 20%;
+            font-size: 3.4vw;
+        }
+        .card-content2 {
+            padding-bottom: 25%;
+            padding-left: 15%;
+        }
+        .card-content2 img {
+            width: 55vw;
+        }
+        .card::before {
+            left: -200px;
+            
+            background: url('images/Intersect\ \(1\).png') center/contain no-repeat;
+             /* Adjust this value to match the card's border-radius */
+        }
+    }
