@@ -16,7 +16,7 @@ body {
     flex-direction: column;
     width: 100%;
     margin: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", Inter !important;
     height: 100vh;
     background-color: #0f1923;
 }
@@ -535,8 +535,9 @@ align-items: center;
     line-height: 10%;
     font-size: 50px;
     }
+
 .content1 {
-        
+        font-family: Poppins;
         position: relative;
         letter-spacing: 0.01em;
         line-height: 50%;
@@ -560,6 +561,7 @@ align-items: center;
             font-size: 56px;
             color: #26aafb;
             font-family: Inter;
+            
         }
         
         .languag-wrapper {
@@ -653,7 +655,7 @@ align-items: center;
     text-align: left;
     font-size: 56px;
     color: #26aafb;
-    font-family: Inter
+    font-family: Poppins;
     }
 
     .project {
