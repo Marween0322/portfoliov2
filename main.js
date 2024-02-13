@@ -67,6 +67,7 @@ scrollToSection('design-link', 'design-section'); // Corrected section ID
 
 document.addEventListener("DOMContentLoaded", function() {
     // Get references to your sections
+    var headerSection = document.getElementById("header-section");
     var aboutSection = document.getElementById("about-section");
     var skillsSection = document.getElementById("skills-section");
     var myProjectsSection = document.getElementById("myprojects-section");
@@ -78,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   
     function handleScroll() {
+      handleSectionScroll(headerSection);
       handleSectionScroll(aboutSection);
       handleSectionScroll(skillsSection);
       handleSectionScroll(myProjectsSection);

@@ -98,7 +98,16 @@ body {
     nav.mobile-nav, .mobile-menu-container{
     display: none;
     }
-
+    .header-section {
+        opacity: 0; /* Initially set opacity to 0 */
+        transform: translateY(20px); /* Initially move down by 20px */
+        transition: opacity 0.8s ease, transform 0.8s ease; /* Add transition for smooth animation */
+      }
+      
+      .header-section.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
 .header-section {
     font-family: 'Poppins', sans-serif;
     display: flex;
