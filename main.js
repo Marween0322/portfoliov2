@@ -64,3 +64,36 @@ scrollToSection('about-link', 'about-section');
 scrollToSection('skills-link', 'skills-section');
 scrollToSection('myprojects-link', 'myprojects-section');
 scrollToSection('design-link', 'design-section'); // Corrected section ID
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Get references to your sections
+    var aboutSection = document.getElementById("about-section");
+    var skillsSection = document.getElementById("skills-section");
+    var myProjectsSection = document.getElementById("myprojects-section");
+    var designSection = document.getElementById("design-section");
+  
+    function isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      return rect.top <= window.innerHeight && rect.bottom >= 0;
+    }
+  
+    function handleScroll() {
+      handleSectionScroll(aboutSection);
+      handleSectionScroll(skillsSection);
+      handleSectionScroll(myProjectsSection);
+      handleSectionScroll(designSection);
+    }
+  
+    function handleSectionScroll(section) {
+      if (isElementInViewport(section)) {
+        section.classList.add("show");
+      } else {
+        section.classList.remove("show");
+      }
+    }
+  
+    window.addEventListener("scroll", handleScroll);
+  
+    handleScroll(); // Check on page load
+  });
+  

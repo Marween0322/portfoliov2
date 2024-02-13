@@ -450,6 +450,16 @@ body {
   }
 
   /* Basic styling for the card */
+
+  .about-section {
+    opacity: 0; /* Initially set opacity to 0 */
+    transform: translateY(20px); /* Initially move down by 20px */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Add transition for smooth animation */
+  }
+  .about-section.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
   .about-section {
     position: relative;
     font-family: Arial, sans-serif;
@@ -544,8 +554,21 @@ align-items: center;
         font-size: 40px;
         margin-top: 5%;
         margin-bottom: 2%;
-
         }
+
+/* Global styles or styles for other sections go here */
+
+.skills-section {
+    opacity: 0; /* Initially set opacity to 0 */
+    transform: translateY(20px); /* Initially move down by 20px */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Add transition for smooth animation */
+  }
+  
+  .skills-section.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
         .skills {
             height: auto;
             position: relative;
@@ -644,7 +667,16 @@ align-items: center;
   
    
 
-
+    .project-container {
+        opacity: 0; /* Initially set opacity to 0 */
+        transform: translateY(20px); /* Initially move down by 20px */
+        transition: opacity 0.8s ease, transform 0.8s ease; /* Add transition for smooth animation */
+      }
+      
+      .project-container.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
     
     .project-title {
 
@@ -841,6 +873,16 @@ align-items: center;
             color: #26aafb;
             font-family: Poppins;
         }
+        .design-container{
+            opacity: 0; /* Initially set opacity to 0 */
+            transform: translateY(20px); /* Initially move down by 20px */
+            transition: opacity 0.8s ease, transform 0.8s ease; /* Add transition for smooth animation */
+          }
+          
+          .design-container.show {
+            opacity: 1;
+            transform: translateY(0);
+          }
 
         .design-container {
             text-align: center;

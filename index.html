@@ -293,24 +293,6 @@
 
     </main>
     
-    <script>
-        function scrollToSection(linkId, sectionId) {
-    document.getElementById(linkId).addEventListener('click', function (event) {
-        event.preventDefault();
-        console.log(`${linkId} link clicked`);
-        document.getElementById(sectionId).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-}
-
-// Usage
-scrollToSection('about-link', 'about-section');
-scrollToSection('skills-link', 'skills-section');
-scrollToSection('myprojects-link', 'myprojects-section');
-scrollToSection('design-link', 'design-section'); // Corrected section ID
-
-    </script>
     <script src="main.js"></script>
 </body>
 </html>
