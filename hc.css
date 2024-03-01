@@ -12,6 +12,10 @@ I*::before{
 }
 /* content */
 body {
+    background: url("/images/DESIGNER.png");
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: 95% -5%;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -264,7 +268,7 @@ body {
     background: #44E5FF;
     padding: 10px 30px;
     border-radius: 9px;
-    color: #152331;
+    color: #165b66;
     display: inline-block;
     font-size: 18px;
     font-style: normal;
@@ -965,6 +969,20 @@ align-items: center;
 
 /* Media query for screens between 1024px and 768px */
 @media screen and (max-width: 1024px) {
+    body {
+        background: url("/images/DESIGNER.png");
+        background-size: 40%;
+        background-repeat: no-repeat;
+        background-position: 95% -7%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        font-family: "Poppins", Inter !important;
+        height: 100vh;
+        background-color: #0f1923;
+    }
+    
     nav {
         width: 105%;
     }
@@ -1030,6 +1048,20 @@ align-items: center;
 
 /* Media query for screens up to 768px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+        background: url("/images/DESIGNER.png");
+        background-size: 40%;
+        background-repeat: no-repeat;
+        background-position: 95% -10%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        font-family: "Poppins", Inter !important;
+        height: 100vh;
+        background-color: #0f1923;
+    }
+
     nav {
         display: none; /* Add this line */
     }
@@ -1235,6 +1267,19 @@ align-items: center;
     
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+    body {
+        background: url("/images/DESIGNER.png");
+        background-size: 40%;
+        background-repeat: no-repeat;
+        background-position: 95% -16%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        font-family: "Poppins", Inter !important;
+        height: 100vh;
+        background-color: #0f1923;
+    }
     nav {
         display: none; /* Hide the nav by default */
     }
@@ -1538,7 +1583,19 @@ align-items: center;
         }
   }
 @media only screen and (min-width: 300px) and (max-width: 575px){
-    
+    body {
+        background: url("/images/DESIGNER.png");
+        background-size: 55%;
+        background-repeat: no-repeat;
+        background-position: 95% -10%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        font-family: "Poppins", Inter !important;
+        height: 100vh;
+        background-color: #0f1923;
+    }
     nav {
         display: none; /* Hide the nav by default */
     }
@@ -1874,6 +1931,19 @@ align-items: center;
 
     }
     @media only screen and (min-width: 300px) and (max-width: 475px){
+        body {
+            background: url("/images/DESIGNER.png");
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-position: 95% 11rem;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0;
+            font-family: "Poppins", Inter !important;
+            height: 100vh;
+            background-color: #0f1923;
+        }
         .card {
             height: 180vw;
         }
