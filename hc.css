@@ -4,13 +4,32 @@
     --dark-green-color: #44E5FF;
     --white-color: #F1F1EF;
     --light-green-color: #C7DAD4;
+    --light-gray-color: #0b7def; /* Updated color to #C9DBED */
+}
+@font-face {
+    font-family: 'Batangas';
+    src: url('fonts/batangas.woff2') format('woff2'),
+         url('fonts/batangas.woff') format('woff');
+    /* Add other font formats if needed */
+    font-weight: normal;
+    font-style: normal;
 }
 *,
 *::after,
 I*::before{
     box-sizing: border-box;
 }
+
 /* content */
+body.light-blue-background {
+    background-color: var(--light-blue-color);
+    color: var(--dark-blue-color); /* Change font color to dark blue when background is light blue */
+}
+
+body.dark-blue-background {
+    background-color: var(--dark-blue-color);
+    color: var(--light-blue-color); /* Change font color to light blue when background is dark blue */
+}
 body {
     background: url('images/DESIGNER.png') center/contain no-repeat;
     background-size: 35%;
@@ -20,10 +39,13 @@ body {
     flex-direction: column;
     width: 100%;
     margin: 0;
-    font-family: "Poppins", Inter !important;
+    font-family: "Poppins", Inter, 'Batangas' !important;
     height: 100vh;
     background-color: #0f1923;
 }
+
+/* Your existing styles */
+
 
 .wrapper{
     width: 100%;
@@ -475,7 +497,7 @@ body {
   }
   .about-section {
     position: relative;
-    font-family: Arial, sans-serif;
+    font-family: 'Batangas', sans-serif;
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -560,7 +582,8 @@ align-items: center;
     }
 
 .content1 {
-        font-family: Poppins;
+        
+        font-family: 'Batangas', sans-serif;
         position: relative;
         letter-spacing: 0.01em;
         line-height: 50%;
@@ -581,7 +604,7 @@ align-items: center;
     opacity: 1;
     transform: translateY(0);
   }
-  
+ 
         .skills {
             height: auto;
             position: relative;
@@ -596,8 +619,6 @@ align-items: center;
             text-align: left;
             font-size: 56px;
             color: #26aafb;
-            font-family: Inter;
-            
         }
         
         .languag-wrapper {
@@ -692,13 +713,11 @@ align-items: center;
       }
     
     .project-title {
-
     position: relative;
     margin-top: 20%;
-    padding-left: 10%;
     display: flex;
-    text-align: left;
-    font-size: 56px;
+    justify-content: center;
+    font-size: 150px;
     color: #26aafb;
     font-family: Poppins;
     }

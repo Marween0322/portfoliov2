@@ -99,3 +99,16 @@ document.addEventListener("DOMContentLoaded", function() {
     handleScroll(); // Check on page load
   });
   
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get the button and body elements
+    var toggleBackgroundButton = document.getElementById('toggleBackgroundButton');
+    var body = document.body;
+
+    // Add click event listener to the button
+    toggleBackgroundButton.addEventListener('click', function() {
+        // Toggle between 'light-blue-background' and 'dark-blue-background' classes on the body
+        body.classList.toggle('light-blue-background');
+        body.classList.toggle('dark-blue-background');
+    });
+});
+
