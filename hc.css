@@ -8,12 +8,10 @@
 }
 @font-face {
     font-family: 'Batangas';
-    src: url('fonts/batangas.woff2') format('woff2'),
-         url('fonts/batangas.woff') format('woff');
-    /* Add other font formats if needed */
-    font-weight: normal;
-    font-style: normal;
-}
+    src: url('font/Batangas Bold 700.otf') format('opentype');
+    /* You can include additional font properties here if needed */
+  }
+  
 
 *,
 *::after,
@@ -40,7 +38,7 @@ body {
     flex-direction: column;
     width: 100%;
     margin: 0;
-    font-family: "Poppins", Inter, 'Batangas' !important;
+    font-family: "Poppins", "Inter", 'Batangas' !important;
     height: 100vh;
     background-color: #0f1923;
 }
