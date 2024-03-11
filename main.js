@@ -112,3 +112,89 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// Function to show the loading sequence
+// Function to show the loading sequence
+function showLoadingSequence() {
+  setTimeout(() => {
+    document.getElementById('developer').style.opacity = '1';
+    document.getElementById('ui-ux').style.opacity = '0';
+    document.getElementById('designer').style.opacity = '0';
+  }, 300); // Faster delay for the first text
+
+  setTimeout(() => {
+    document.getElementById('developer').style.opacity = '0';
+    document.getElementById('ui-ux').style.opacity = '1';
+    document.getElementById('designer').style.opacity = '0';
+  }, 600); // Faster delay for hiding the texts
+
+  setTimeout(() => {
+    document.getElementById('developer').style.opacity = '0';
+    document.getElementById('ui-ux').style.opacity = '0';
+    document.getElementById('designer').style.opacity = '1';
+  }, 900); // Faster delay for the second text
+
+  setTimeout(() => {
+    document.getElementById('developer').style.opacity = '1';
+    document.getElementById('ui-ux').style.opacity = '0';
+    document.getElementById('designer').style.opacity = '0';
+  }, 1200); // Faster delay for hiding the texts
+
+  setTimeout(() => {
+    document.getElementById('developer').style.opacity = '0';
+    document.getElementById('ui-ux').style.opacity = '1';
+    document.getElementById('designer').style.opacity = '0';
+  }, 1500); // Faster delay for the third text
+
+  setTimeout(() => {
+    document.getElementById('developer').style.opacity = '0';
+    document.getElementById('ui-ux').style.opacity = '1';
+    document.getElementById('designer').style.opacity = '0';
+  }, 1800); // Faster delay for hiding the texts
+}
+
+// Repeat the loading sequence 3 times
+for (let i = 0; i < 3; i++) {
+  showLoadingSequence();
+}
+
+// Show the page after the loading sequence is complete
+setTimeout(() => {
+  document.querySelector('.loading-screen').style.animation = 'slideUp 0.8s ease-out forwards'; // Trigger the sliding-up animation
+   // Add any additional actions to show the main page content here
+}, 2000); // Total duration for 3 repetitions, adjust as needed
+
+
+let mouseX = 0;
+let mouseY = 0;
+let lastTimestamp = 0;
+
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function update(timestamp) {
+  const cursor = document.getElementById('cursor');
+  const circle = document.getElementById('circle');
+
+  const elapsed = timestamp - lastTimestamp;
+  lastTimestamp = timestamp;
+
+  const smoothFactor = 0.1;
+  const deltaX = (mouseX - cursor.offsetLeft) * smoothFactor;
+  const deltaY = (mouseY - cursor.offsetTop) * smoothFactor;
+
+  cursor.style.left = `${cursor.offsetLeft + deltaX}px`;
+  cursor.style.top = `${cursor.offsetTop + deltaY}px`;
+
+  circle.style.transform = `translate(-50%, -50%)`;
+
+  requestAnimationFrame(update);
+}
+
+function start() {
+  lastTimestamp = performance.now();
+  update(lastTimestamp);
+}
+
+start();
