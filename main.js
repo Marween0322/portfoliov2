@@ -198,3 +198,39 @@ function start() {
 }
 
 start();
+
+ // Get the container and clone its children
+ const carouselContainer = document.getElementById('text-carousel');
+ const textItems = carouselContainer.querySelectorAll('.text-item');
+
+ // Function to clone and append text items
+ function cloneAndAppend() {
+     textItems.forEach(item => {
+         const clone = item.cloneNode(true);
+         carouselContainer.appendChild(clone);
+     });
+ }
+
+ // Initial clone
+ cloneAndAppend();
+
+ // Animation
+ function startAnimation() {
+     let position = 0;
+
+     function animate() {
+         position -= 5; // Adjust speed by changing decrement value
+         carouselContainer.style.transform = `translateX(${position}px)`;
+
+         if (position <= -textItems[0].offsetWidth) {
+             position += textItems[0].offsetWidth;
+             cloneAndAppend();
+         }
+
+         requestAnimationFrame(animate);
+     }
+
+     animate();
+ }
+
+ startAnimation();
