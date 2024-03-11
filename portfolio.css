@@ -1259,7 +1259,7 @@ align-items: center;
         height: 100vh;
         background-color: #0f1923;
     }
-    .cursor{
+    #circle{
         display: none;
     }
     #designer {
@@ -1497,7 +1497,7 @@ align-items: center;
         height: 100vh;
         background-color: #0f1923;
     }
-    .cursor{
+    #circle{
         display: none;
     }
     #designer {
@@ -1835,7 +1835,7 @@ align-items: center;
         height: 100vh;
         background-color: #0f1923;
     }
-    .cursor{
+    #circle{
         display: none;
     }
     #designer {
@@ -2206,7 +2206,8 @@ align-items: center;
             height: 100vh;
             background-color: #0f1923;
         }
-        .cursor{
+        
+        #circle{
             display: none;
         }
         #designer {
