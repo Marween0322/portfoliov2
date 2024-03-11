@@ -1259,6 +1259,9 @@ align-items: center;
         height: 100vh;
         background-color: #0f1923;
     }
+    .cursor{
+        display: none;
+    }
     #designer {
         right: 18%;
         font-size: 14vw;
@@ -1493,6 +1496,9 @@ align-items: center;
         font-family: "Poppins", Inter !important;
         height: 100vh;
         background-color: #0f1923;
+    }
+    .cursor{
+        display: none;
     }
     #designer {
         right: 18%;
@@ -1828,6 +1834,9 @@ align-items: center;
         font-family: "Poppins", Inter !important;
         height: 100vh;
         background-color: #0f1923;
+    }
+    .cursor{
+        display: none;
     }
     #designer {
         right: 18%;
@@ -2196,6 +2205,9 @@ align-items: center;
             font-family: "Poppins", Inter !important;
             height: 100vh;
             background-color: #0f1923;
+        }
+        .cursor{
+            display: none;
         }
         #designer {
             right: 18%;
