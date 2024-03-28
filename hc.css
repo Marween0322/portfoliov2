@@ -18,7 +18,46 @@
 I*::before{
     box-sizing: border-box;
 }
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: none; /* Initially, no animation */
+}
 
+.loading-text {
+    font-size: 200px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    color: #ffffff;
+}
+
+.loading-text-part {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.1s ease-out;
+    display: inline-block;
+    top: 35% !important;
+}
+
+
+/* Add animation to slide up the loading screen */
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
 /* content */
 body.light-blue-background {
     background-color: var(--light-blue-color);
@@ -145,6 +184,7 @@ body {
 .header-section .left h2{
     display: none;
 }
+
 .group-child {
     padding-left: 8%;
     margin-right: 100px;
@@ -948,6 +988,8 @@ align-items: center;
         .small-image:hover {
             transform: scale(1.1); /* Adjust the scale factor for the zoom effect */
         }
+
+        
 
         footer {
             margin-top: 15%;

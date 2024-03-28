@@ -234,3 +234,28 @@ start();
  }
 
  startAnimation();
+
+
+ function redirectToLC() {
+  // Redirect to l&c.html when the image is clicked
+  window.location.href = "l&c.html";
+}
+function redirectToAIP() {
+  // Redirect to aip.html when the first image is clicked
+  window.location.href = "aip.html";
+}
+function redirectToHC() {
+  // Redirect to l&c.html when the image is clicked
+  window.location.href = "hc.html";
+}
+function redirectToRP() {
+  // Redirect to aip.html when the first image is clicked
+  window.location.href = "rp.html";
+}
+function redirectToMI() {
+  // Redirect to l&c.html when the image is clicked
+  window.location.href = "mi.html";
+}
+function goBack() {
+  window.history.back();
+}
