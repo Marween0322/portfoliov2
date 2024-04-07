@@ -824,17 +824,18 @@ align-items: center;
         
         .languag-wrapper {
             border-radius: 10px;
-            border: 1px solid #26aafb;
-            box-sizing: border-box;
-            width: 90%; /* Use percentage value for flexibility */
-            max-width: 300px; /* Add max-width to prevent it from growing too large */
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-            padding: 10px;
-            z-index: 0;
-            flex-basis: 45%; /* Adjust the margin between language wrappers */
+    border: 1px solid #26aafb;
+    box-sizing: border-box;
+    width: 90%; /* Use percentage value for flexibility */
+    max-width: 300px; /* Add max-width to prevent it from growing too large */
+    display: flex;
+    flex-direction: column; /* Changed to column to align items vertically */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center align items */
+    padding: 10px;
+    text-align: center; /* Center the text */
+    z-index: 0;
+    flex-basis: 45%; /* Adjust the margin between language wrappers */
         }
         
 
@@ -892,13 +893,14 @@ align-items: center;
         display: flex;
         align-items: center;
         gap: 10%;
-    }
-    .python, .php, .javascript, .css, .html5, .react, .tailwindcss, .bootstrap, .django, .laravel, .vs-code, .figma, .pgadmin, .github, .git, img {
-        width: 2vw; /* Make the image responsive */
+        text-align: center; /* Center the text horizontally */
+        }
+    /* .python, .php, .javascript, .css, .html5, .react, .tailwindcss, .bootstrap, .django, .laravel, .vs-code, .figma, .pgadmin, .github, .git, img {
+        width: 2vw;
         height: auto;
-        margin-right: 10px; /* Add spacing between the image and text */
+        margin-right: 10px; 
         justify-content:space-around;
-    }
+    } */
   
    
 
@@ -1794,7 +1796,7 @@ align-items: center;
         }
     
         .languag-wrapper a {
-            font-size: 4vw;
+            font-size: 3.2vw;
         }
     
         .content1 {
